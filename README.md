@@ -47,8 +47,9 @@ Key Skills Demonstrated
 -	SOC-style documentation and reporting
 
 Limitations & Future Improvements
--	Custom rules and decoders were not implemented to maintain focus on SOC investigation workflows
--	Future enhancements may include:
+-	Custom rules and decoders were not implemented to maintain focus on SOC investigation workflows.
+  
+Future enhancements may include:
   -	Custom detection tuning
   -	Automated response actions
   - Integration with additional threat intelligence sources
