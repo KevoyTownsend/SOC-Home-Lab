@@ -42,7 +42,7 @@ Screenshots included in this repository demonstrate:
 -	Wazuh alert generation for SSH brute-force activity
 -	Contextual analysis showing repeated failed authentication attempts
 
-Screenshots are located in the ![/screenshots]() directory.
+Screenshots are located in the [/screenshots](https://github.com/KevoyTownsend/SOC-Home-Lab/tree/main/screenshots) directory.
 
 Key Skills Demonstrated
 -	SIEM log ingestion and monitoring
