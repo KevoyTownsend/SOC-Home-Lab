@@ -12,7 +12,7 @@ Core components:
 -	Attacker Machine (Kali Linux) – Simulated threat actor
 All systems were deployed in a virtualized lab environment.
 
-![Nmap reconnaissance from Kali](screenshots/architecture_overview.png)
+![Network Architecture](screenshots/architecture_overview.png)
 
  Objectives
 -	Configure centralized log collection using Wazuh
@@ -24,7 +24,6 @@ All systems were deployed in a virtualized lab environment.
 Attack Simulation
 An SSH brute-force attack was conducted from a Kali Linux system targeting the monitored Linux endpoint. Multiple failed authentication attempts were generated in rapid succession to emulate common real-world attack behavior.
 
-![Nmap reconnaissance from Kali](screenshots/SSH-bruteforce_attack.png)
 
 Detection & Alerting
 Wazuh successfully generated alerts indicating repeated SSH authentication failures consistent with brute-force activity. The alerts were triggered based on event frequency and pattern recognition rather than a single failed login attempt.
@@ -42,6 +41,8 @@ Screenshots included in this repository demonstrate:
 -	Attack execution from the attacker machine
 -	Wazuh alert generation for SSH brute-force activity
 -	Contextual analysis showing repeated failed authentication attempts
+
+Screenshots are located in the ![/screenshots]() directory.
 
 Key Skills Demonstrated
 -	SIEM log ingestion and monitoring
