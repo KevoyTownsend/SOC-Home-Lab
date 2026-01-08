@@ -4,7 +4,7 @@ Project Overview
 This project demonstrates the design and operation of a small-scale Security Operations Center (SOC) home lab focused on log collection, threat detection, and alert investigation. Using Wazuh as a SIEM, the lab simulates an SSH brute-force attack against a monitored Linux endpoint and documents how the activity was detected and analyzed.
 The objective of this project is to showcase practical SOC workflows, including alert triage, correlation, and investigation, rather than tool configuration alone.
 
-Lab Architecture
+## Lab Architecture
 Core components:
 - Wazuh Manager – Centralized log analysis and alerting
 -	Wazuh Agent (Linux) – Monitored endpoint
@@ -14,21 +14,21 @@ All systems were deployed in a virtualized lab environment.
 
 ![Network Architecture](screenshots/architecture_overview.png)
 
- Objectives
+## Objectives
 -	Configure centralized log collection using Wazuh
 -	Monitor authentication activity on a Linux endpoint
 -	Simulate an SSH brute-force attack
 -	Detect malicious behavior through SIEM alerts
 -	Investigate and correlate events to confirm attack patterns
 
-Attack Simulation
+## Attack Simulation
 An SSH brute-force attack was conducted from a Kali Linux system targeting the monitored Linux endpoint. Multiple failed authentication attempts were generated in rapid succession to emulate common real-world attack behavior.
 
 
-Detection & Alerting
+## Detection & Alerting
 Wazuh successfully generated alerts indicating repeated SSH authentication failures consistent with brute-force activity. The alerts were triggered based on event frequency and pattern recognition rather than a single failed login attempt.
 
-Investigation & Analysis
+## Investigation & Analysis
 The alert was investigated using Wazuh’s event correlation and contextual analysis features. By reviewing surrounding events, the following indicators were observed:
 -	Multiple failed SSH login attempts
 -	Events occurring milliseconds apart
@@ -36,7 +36,7 @@ The alert was investigated using Wazuh’s event correlation and contextual anal
 -	Consistent targeting of the same monitored host
 Note: The source.ip field was not consistently populated due to log parsing limitations. Despite this, attack confirmation was achieved through correlation of timestamps, event frequency, and agent-level context.
 
-Evidence (Screenshots)
+## Evidence (Screenshots)
 Screenshots included in this repository demonstrate:
 -	Attack execution from the attacker machine
 -	Wazuh alert generation for SSH brute-force activity
@@ -44,14 +44,14 @@ Screenshots included in this repository demonstrate:
 
 Screenshots are located in the [/screenshots](https://github.com/KevoyTownsend/SOC-Home-Lab/tree/main/screenshots) directory.
 
-Key Skills Demonstrated
+## Key Skills Demonstrated
 -	SIEM log ingestion and monitoring
 -	Security alert triage and investigation
 -	Event correlation and pattern analysis
 -	Linux authentication monitoring
 -	SOC-style documentation and reporting
 
-Limitations & Future Improvements
+## Limitations & Future Improvements
 -	Custom rules and decoders were not implemented to maintain focus on SOC investigation workflows.
   
 Future enhancements may include:
